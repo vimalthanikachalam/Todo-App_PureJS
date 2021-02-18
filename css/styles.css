@@ -12,6 +12,10 @@ main {
   display: flex;
 }
 
+a {
+  color: #818181;
+}
+
 ::-webkit-scrollbar {
   width: 4px;
 }
@@ -163,7 +167,7 @@ main {
 
 .right_container {
   width: 100%;
-  background: url(../img/pexels-deepu-b-iyer-40465.jpg) center no-repeat;
+  background: url(https://source.unsplash.com/random?sky) center no-repeat;
   background-size: cover;
 }
 

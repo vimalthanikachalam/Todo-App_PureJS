@@ -1,6 +1,6 @@
 # TODO APP Pure Javascript
 
-A simple all in one todo app where you can categorize your Task Management, Project Management, Productivity, Getting Things Done, Scheduling, and Collaboration. also for general-purpose,
+A Simple all in one todo app where you can categorize your Task Management, Project Management, Productivity, Getting Things Done, Scheduling, and Collaboration. also for general-purpose,
 
 ### Run
 
