@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+    <main>
+        <!-- left container -->
+        <section class="left_container">
+            <div class="appbar">
+                <p>To Do Application</p>
+            </div>
+            <nav class="nav_bar">
+                <div class="list_item active">
+                    <ion-icon class="sunny" name="sunny-outline"></ion-icon>
+                    <a href="#">My Day</a>
+                </div>
+                <div class="list_item">
+                    <ion-icon class="star" name="star-outline"></ion-icon>
+                    <a href="#">Important</a>
+                </div>
+                <div class="list_item">
+                    <ion-icon class="calendar" name="calendar-outline"></ion-icon>
+                    <a href="#">Planned</a>
+                </div>
+                <div class="list_item">
+                    <ion-icon class="person" name="person-outline"></ion-icon>
+                    <a href="#">Assigned to you</a>
+                </div>
+                <div class="list_item">
+                    <ion-icon class="home" name="home-outline"></ion-icon>
+                    <a href="#">Tasks</a>
+                </div>
+                <hr>
+                <div class="list_item">
+                    <ion-icon class="project" name="code-slash-outline"></ion-icon>
+                    <a href="#">Project Details</a>
+                </div>
+            </nav>
+            <div class="left_footer">
+                <div class="left_footer_container">
+                    <p>Fork this project :</p>
+                    <ion-icon name="logo-github"></ion-icon>
+                    <ion-icon name="logo-codepen"></ion-icon>
+                </div>
+            </div>
+        </section>
+        <!-- left container -->
+
+        <!-- Right container -->
+        <section class="right_container">
+            <div class="right_appbar">
+                <ion-icon name="remove-outline"></ion-icon>
+                <ion-icon name="stop-outline"></ion-icon>
+                <ion-icon name="close-outline"></ion-icon>
+            </div>
+            <div class="right_header">
+                <div class="title_container">
+                    <p class="title">My Day</p>
+                    <p class="date">Thursday, February 18</p>
+                </div>
+                <div class="more_container">
+                    <ion-icon name="bulb-outline"></ion-icon>
+                    <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+                </div>
+            </div>
+
+            <div class="card_wrapper">
+
+                <div class="todo_card_container">
+                    <div class="todo_check">
+                        <ion-icon name="radio-button-off-outline"></ion-icon>
+                        <!-- <ion-icon name="radio-button-on-outline"></ion-icon> -->
+                    </div>
+                    <div class="todo_content">
+                        <p class="todo_title">Im a Title</p>
+                        <p class="todo_desc">Task</p>
+                    </div>
+                    <div class="todo_fav">
+                        <ion-icon name="star-outline"></ion-icon>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="add_new_note">
+                <div id="add_note" class="add_icon">
+                    <ion-icon name="add-outline"></ion-icon>
+                </div>
+                <div class="task_content">
+                    <input id="task_content" placeholder="Add a task" />
+                </div>
+            </div>
+
+
+        </section>
+        <!-- Right container -->
+    </main>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

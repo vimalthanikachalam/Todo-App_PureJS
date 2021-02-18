@@ -1,0 +1,328 @@
+//Static Variables
+$icon_sunny_col: #b34a6a;
+$icon_star_col: #95a994;
+$icon_calendar_col: #2e7e7a;
+$icon_person_col: #3b8264;
+$icon_task_col: #3b8264;
+$gray_text: #818181;
+$text_black: #444444;
+$gray_40: #edeef0;
+$font_primary: 1.4rem;
+
+//--------------------------//
+html {
+  font-size: 10px;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  display: flex;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(185, 185, 185);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.left_container {
+  width: 360px;
+  border-right: 1px solid #f3f3f3;
+  height: 100vh;
+  background-color: #fbfcfe;
+  position: relative;
+}
+
+.appbar {
+  background-color: #fbfcfd;
+  padding: 10px;
+  font-size: 14px;
+  color: $gray_text;
+}
+
+.nav_bar {
+  display: grid;
+  & hr {
+    width: 92%;
+    color: $gray_40;
+    border: 1px solid;
+    padding: 0;
+    margin: auto;
+  }
+}
+
+.sunny {
+  color: $icon_sunny_col;
+}
+
+.star {
+  color: $icon_star_col;
+}
+
+.calendar {
+  color: $icon_calendar_col;
+}
+
+.person {
+  color: $icon_person_col;
+}
+
+.home {
+  color: $icon_task_col;
+}
+
+.project {
+  color: $icon_sunny_col;
+}
+
+.active {
+  background-color: rgba(179, 74, 106, 0.1) !important;
+  position: relative;
+  font-weight: 500;
+
+  a {
+    color: $icon_sunny_col;
+  }
+
+  &::before {
+    content: "";
+    border-right: 4px solid $icon_sunny_col;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+  }
+}
+
+.list_item {
+  cursor: pointer;
+  padding: 16px 16px 16px 22px;
+  display: inline-flex;
+  color: $text_black;
+
+  & ion-icon {
+    font-size: 18px;
+    margin-right: 16px;
+  }
+  & a {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  &:hover {
+    background-color: #f4f5f5;
+  }
+}
+.left_footer {
+  position: absolute;
+  bottom: 0;
+  padding: 18px 0;
+  background-color: $gray_40;
+  width: 100%;
+}
+
+.left_footer_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5a5a5a;
+
+  & p {
+    cursor: pointer;
+    font-size: $font_primary;
+    padding-right: 8px;
+  }
+
+  & ion-icon {
+    cursor: pointer;
+    font-size: 30px;
+    margin-right: 8px;
+    transition: all 0.2s;
+
+    &:hover {
+      color: black;
+    }
+  }
+}
+
+.right_container {
+  width: 100%;
+  // background: url(https://source.unsplash.com/random?nature) center no-repeat;
+  background: url(../img/pexels-deepu-b-iyer-40465.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.right_appbar {
+  display: flex;
+  font-size: 14px;
+  color: white;
+  justify-content: flex-end;
+  align-items: center;
+
+  & ion-icon {
+    cursor: pointer;
+    font-size: 1.8rem;
+    background-color: transparent;
+    padding: 10px 16px;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: rgb(66, 66, 66);
+    }
+  }
+}
+
+.right_header {
+  display: flex;
+}
+
+.title_container {
+  flex-grow: 1;
+  margin: 30px;
+  color: white;
+
+  & .title {
+    font-size: 28px;
+    font-weight: 600;
+  }
+  & .date {
+    font-size: $font_primary;
+    font-weight: 300;
+  }
+}
+
+.more_container {
+  margin: 30px;
+  font-size: 1.8rem;
+  color: white;
+
+  & ion-icon {
+    cursor: pointer;
+    padding: 8px;
+    background: #00000050;
+    border-radius: 6px;
+    margin: 0 6px;
+    transition: all 0.2s;
+
+    &:hover {
+      background: #00000090;
+    }
+  }
+}
+
+.todo_card_container {
+  cursor: pointer;
+  display: flex;
+  margin: 10px 30px;
+  background-color: #fff;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-size: $font_primary;
+  align-items: center;
+  box-shadow: 0 2px 15px #00000020;
+  transition: all 0.2s;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 98%;
+    border: 1px solid #00000010;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  & .todo_check {
+    color: $gray_text;
+    font-size: 2.6rem;
+    margin-top: 8px;
+  }
+
+  & .todo_content {
+    flex-grow: 1;
+    margin: 0 16px;
+
+    & .todo_desc {
+      color: $gray_text;
+      font-size: 1.2rem;
+    }
+  }
+
+  & .todo_fav {
+    color: $gray_text;
+    font-size: 2rem;
+  }
+
+  &:hover {
+    background-color: rgb(250, 250, 250);
+    box-shadow: 0 2px 5px #00000040;
+  }
+}
+
+.card_wrapper {
+  height: 67vh;
+  overflow: auto;
+}
+
+.add_new_note {
+  display: flex;
+  margin: 40px 30px;
+  background-color: #00000060;
+  backdrop-filter: blur(6px);
+  padding: 6px 20px;
+  border-radius: 6px;
+  align-items: center;
+  transition: all 0.2s;
+  color: white;
+
+  & .add_icon {
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-top: 8px;
+    margin-right: 16px;
+  }
+  & .task_content {
+    font-size: 1.6rem;
+
+    & input {
+      background: transparent;
+      font-size: $font_primary;
+      width: 66vw;
+      color: white;
+      background-color: -internal-light-dark(
+        rgb(255, 255, 255),
+        rgb(59, 59, 59)
+      );
+      border-width: 0px;
+      border-style: none;
+      border-color: transparent;
+      border-image: none;
+      border-radius: 0px;
+    }
+    :focus {
+      outline: none;
+    }
+    ::placeholder {
+      color: white;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0 2px 15px #00000020;
+  }
+}
