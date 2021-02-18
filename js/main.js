@@ -22,6 +22,7 @@ const sendData = (value) => {
   list.update({ [key]: value }).then(console.log("Successfully Updated!"));
 };
 
+//Get Data from database.
 const getData = () => {
   database.on("value", (snapshot) => {
     const data = snapshot.val();

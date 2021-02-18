@@ -330,3 +330,24 @@ a {
     box-shadow: 0 2px 15px #00000020;
   }
 }
+
+.loader {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  width: 260px;
+  height: 260px;
+  margin: 100px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px #00000060;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: url(../img/loader.gif) center no-repeat;
+  width: 100px;
+  height: 60px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
