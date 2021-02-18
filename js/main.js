@@ -16,15 +16,17 @@ const addContent = () => {
 };
 
 //Update to database
-const sendData = (value) => {
+const sendData = async (value) => {
   const list = database.child("todo_list");
   const key = list.push().key;
-  list.update({ [key]: value }).then(console.log("Successfully Updated!"));
+  await list
+    .update({ [key]: value })
+    .then(console.log("Successfully Updated!"));
 };
 
 //Get Data from database.
-const getData = () => {
-  database.on("value", (snapshot) => {
+const getData = async () => {
+  await database.on("value", (snapshot) => {
     const data = snapshot.val();
     card.innerHTML = "";
     Object.values(data).map((item) => {
