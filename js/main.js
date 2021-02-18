@@ -12,11 +12,7 @@ const addContent = () => {
   } else {
     alert("Input Value cannot be empty!! Please try again.");
   }
-
-  //   sendData();
 };
-
-add_note.addEventListener("click", addContent);
 
 //Update to database
 const sendData = (value) => {
@@ -24,3 +20,5 @@ const sendData = (value) => {
   const key = user.push().key;
   list.update({ [key]: value }).then(console.log("Successfully Updated!"));
 };
+
+add_note.addEventListener("click", addContent);
